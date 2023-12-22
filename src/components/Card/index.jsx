@@ -1,11 +1,13 @@
 import "./styles.scss";
 
+import Link from "next/link";
 import { Icons } from "@/components";
 import { formatCurrency } from "@/utils";
-import Link from "next/link";
+import { useCart } from "@/context";
 
 export function Card({ product }) {
     const { id, name, image, price } = product;
+    const { toggleProduct } = useCart();
 
     return (
         <div className="card">
@@ -22,8 +24,14 @@ export function Card({ product }) {
                     </span>
 
                     <div className="card__content--actions">
-                        <Icons.heart />
-                        <Icons.cart />
+                        <Icons.heart
+                        // onClick={() => toggleFavourite(product)}
+                        // className={isInFavourites(product) ? "active" : ""}
+                        />
+                        <Icons.cart
+                            onClick={() => toggleProduct(product)}
+                            // className={isInCart(product) ? "active" : ""}
+                        />
                     </div>
                 </div>
             </div>

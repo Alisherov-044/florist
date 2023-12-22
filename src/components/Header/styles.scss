@@ -1,4 +1,4 @@
-@import "@/styles/abstract/mixins.scss";
+@import "@/styles/abstract/mixins", "@/styles/abstract/variables";
 
 .header {
     width: 100%;
@@ -14,6 +14,23 @@
         @include flex(row, center, flex-end);
         gap: 20px;
         grid-area: actions;
+
+        & > a {
+            position: relative;
+
+            .indicator {
+                @include center;
+                position: absolute;
+                font-size: 12px;
+                top: -5px;
+                right: -5px;
+                width: 16px;
+                height: 16px;
+                color: $white;
+                border-radius: 50%;
+                background-color: $blue;
+            }
+        }
     }
 
     @include media-max(600px) {

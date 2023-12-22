@@ -3,6 +3,7 @@
 .products {
     width: 100vw;
     margin-block: 20px;
+    scrollbar-gutter: table right;
 
     .container {
         @include grid(repeat(5, 1fr), unset);

@@ -1,6 +1,7 @@
 import "@/styles/main.scss";
 
-import { Header, Footer } from "../components";
+import { CartProvider } from "@/context";
+import { Header, Footer } from "@/components";
 
 export const metadata = {
     title: "Floom Flowers & Gifts",
@@ -14,9 +15,11 @@ export default function RootLayout({ children }) {
     return (
         <html lang="en">
             <body>
-                <Header />
-                {children}
-                <Footer />
+                <CartProvider>
+                    <Header />
+                    {children}
+                    <Footer />
+                </CartProvider>
             </body>
         </html>
     );
