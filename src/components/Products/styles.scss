@@ -1,0 +1,8 @@
+@import "@/styles/abstract/mixins";
+
+.products {
+    width: 100vw;
+    @include grid(repeat(4, 1fr), unset);
+    gap: 20px;
+    margin-block: 20px;
+}

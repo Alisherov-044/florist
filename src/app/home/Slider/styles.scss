@@ -1,0 +1,91 @@
+@import "@/styles/abstract/mixins";
+
+@keyframes slide {
+    from {
+        transform: translateX(0);
+    }
+    to {
+        transform: translateX(calc(-100% + 100vw));
+    }
+}
+
+.sections__wrapper {
+    position: relative;
+    height: 600px;
+    width: 100vw;
+    margin-block: 20px;
+}
+
+.sliders {
+    @include flex(row, flex-start, space-around);
+    position: absolute;
+    gap: 15px;
+    height: 100%;
+    animation: slide 20s linear infinite;
+
+    &:active {
+        animation-play-state: paused;
+    }
+
+    @include media-max(600px) {
+        gap: 5px;
+    }
+}
+
+.slider {
+    display: grid;
+    gap: 15px;
+    flex-shrink: 0;
+    width: 100vw;
+    overflow: hidden;
+    grid-template-areas:
+        "a a b b c c"
+        "a a b b c c"
+        "a a d d c c"
+        "a a d d e f";
+
+    &__item {
+        position: relative;
+
+        img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            object-position: right;
+        }
+
+        &.left {
+            img {
+                object-position: left;
+            }
+        }
+    }
+
+    &-one {
+        grid-area: a;
+    }
+
+    &-two {
+        grid-area: b;
+    }
+
+    &-three {
+        grid-area: c;
+    }
+
+    &-four {
+        grid-area: d;
+    }
+
+    &-five {
+        grid-area: e;
+    }
+
+    &-six {
+        grid-area: f;
+    }
+
+    @include media-max(600px) {
+        gap: 5px;
+    }
+}

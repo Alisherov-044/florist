@@ -1,0 +1,50 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+
+    &::-webkit-scrollbar {
+        width: 8px;
+        background: transparent;
+    }
+
+    &::-webkit-scrollbar-thumb {
+        background-color: $black;
+    }
+}
+
+html,
+body {
+    min-height: 100%;
+}
+
+body {
+    @include flex(column, flex-start, flex-start);
+    overflow-x: hidden;
+
+    & > main {
+        flex: 1 1 auto;
+    }
+}
+
+a,
+ul,
+ol,
+li,
+input,
+button,
+textarea {
+    all: unset;
+}
+
+a,
+button {
+    cursor: pointer;
+}
+
+.container {
+    width: 100%;
+    max-width: 1290px;
+    padding-inline: 10px;
+    margin-inline: auto;
+}

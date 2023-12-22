@@ -1,0 +1,34 @@
+@import "@/styles/abstract/mixins.scss";
+
+.not-found {
+    @include center;
+    position: relative;
+    width: 100%;
+    padding-block: 20px;
+
+    & > .container {
+        @include flex(column, center, center);
+    }
+
+    svg {
+        width: 160px;
+        aspect-ratio: 1 / 1;
+        margin-bottom: 40px;
+    }
+
+    &__title {
+        font-size: 32px;
+        margin-bottom: 20px;
+        text-align: center;
+    }
+
+    &__text {
+        font-size: 18px;
+        text-align: center;
+
+        a {
+            font-weight: 600;
+            text-decoration: underline;
+        }
+    }
+}

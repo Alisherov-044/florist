@@ -1,0 +1,66 @@
+@import "@/styles/abstract/mixins", "@/styles/abstract/variables";
+
+.card {
+    @include flex(column, flex-start, flex-start);
+    position: relative;
+    border-radius: 4px;
+    overflow: hidden;
+    transition: all 0.2s ease;
+
+    @media screen and (any-hover: hover) {
+        &:hover {
+            box-shadow: 0 4px 24px 2px rgba(0, 0, 0, 0.1);
+        }
+    }
+
+    &__img {
+        position: relative;
+        width: 100%;
+
+        img {
+            width: 100%;
+            aspect-ratio: 1 / 1;
+            object-fit: cover;
+            object-position: center center;
+        }
+    }
+
+    &__content {
+        @include flex(column, flex-start, flex-start);
+        position: relative;
+        width: 100%;
+        padding: 10px;
+
+        &--row {
+            @include flex(row, center, space-between);
+            width: 100%;
+        }
+
+        &--actions {
+            @include flex(row, center, flex-end);
+            gap: 5px;
+
+            svg {
+                cursor: pointer;
+
+                path {
+                    transition: all 0.2s ease;
+                }
+
+                &:hover {
+                    path {
+                        stroke: $green;
+                    }
+                }
+            }
+        }
+    }
+
+    &__name {
+        @include font(16px, 500, 120%, $green);
+    }
+
+    &__price {
+        @include font(16px, 600, 120%, $black);
+    }
+}
