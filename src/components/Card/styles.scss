@@ -1,7 +1,7 @@
 @import "@/styles/abstract/mixins", "@/styles/abstract/variables";
 
 .card {
-    @include flex(column, flex-start, flex-start);
+    @include flex(column, flex-start, space-between);
     position: relative;
     border-radius: 4px;
     overflow: hidden;
@@ -27,6 +27,7 @@
 
     &__content {
         @include flex(column, flex-start, flex-start);
+        gap: 5px;
         position: relative;
         width: 100%;
         padding: 10px;
@@ -58,6 +59,11 @@
 
     &__name {
         @include font(16px, 500, 120%, $green);
+        width: 100%;
+        display: -webkit-box;
+        -webkit-box-orient: vertical;
+        -webkit-line-clamp: 1;
+        overflow: hidden;
     }
 
     &__price {

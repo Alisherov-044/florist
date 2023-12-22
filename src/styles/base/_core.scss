@@ -16,11 +16,11 @@
 html,
 body {
     min-height: 100%;
+    overflow-x: hidden;
 }
 
 body {
     @include flex(column, flex-start, flex-start);
-    overflow-x: hidden;
 
     & > main {
         flex: 1 1 auto;
