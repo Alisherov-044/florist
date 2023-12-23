@@ -3,13 +3,11 @@ import "./styles.scss";
 
 import Link from "next/link";
 import { Icons, Search } from "@/components";
-import { useCart } from "@/context";
-// import { useCart, useFavourites } from "@/hook";
+import { useCart, useFavourites } from "@/context";
 
 export function Header() {
     const { products } = useCart();
-    // const { getCartAmount } = useCart();
-    // const { favourites } = useFavourites();
+    const { favourites } = useFavourites();
 
     return (
         <header className="header">
@@ -23,9 +21,9 @@ export function Header() {
                 <div className="header__actions">
                     <Link href="/favourites">
                         <Icons.heart />
-                        {/* {favourites.length > 0 && (
+                        {favourites.length > 0 && (
                             <div className="indicator">{favourites.length}</div>
-                        )} */}
+                        )}
                     </Link>
                     <Link href="/cart">
                         <Icons.cart />

@@ -1,4 +1,4 @@
-@import "@/styles/abstract/mixins";
+@import "@/styles/abstract/mixins", "@/styles/abstract/variables";
 
 .products {
     width: 100vw;
@@ -8,6 +8,9 @@
     .container {
         @include grid(repeat(5, 1fr), unset);
         gap: 20px;
+        padding: 20px;
+        border-radius: 6px;
+        background-color: $grey;
 
         @include media-max(1200px) {
             grid-template-columns: repeat(4, 1fr);
@@ -21,6 +24,9 @@
         @include media-max(650px) {
             grid-template-columns: repeat(2, 1fr);
             gap: 10px;
+            padding-block: 0;
+            padding-inline: 10px;
+            background-color: transparent;
         }
     }
 }

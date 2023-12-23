@@ -37,6 +37,30 @@ const products = [
         price: 45.9,
         image: "https://storage.florist.ru/cdn-cgi/image/format=webp/f/get/iflorist/product/O/V/_dPZ3A4SWxNeDhsZ2pKd0RLVFUyVHprYnliVjdxSGo1eE42bFVlOE9FZTFOYnJYbDNoRktYZStLQUs2OG13a045UHAxeFd2MmFwNjNqbnVBNFZZSm9ZUStjYUhYdWQwZG52cnFza05uZ0VXT0ZBSldHL1F0c1d0SGZNdVJKTVp3Um1KaVhoQlpHbzZBNE5KdG10T0pBPT0=/270x270/img.jpg",
     },
+    {
+        id: 7,
+        name: 'Bouquet "Cleopatra"',
+        price: 46.45,
+        image: "https://storage.florist.ru/cdn-cgi/image/format=webp/f/get/iflorist/product/O/V/_dPZ3A4SWxNeDhsZ2pKd0RLVFUyVHprYnliVjdxSGo1eE42bFVlOE9FZTFOYnJYbDNoRktYZStLQUs2OG13a3IvMXl5SDhsdWIwU0x5alA2b2NFMW1xUUFLbXZnS0RROUxqZStqSGVXektTNElVTVlHaUVKNzRUcWVOc0NTRm53Um1KaVhoQlpHbzZBNE5KdG10T0pBPT0=/270x270/img.jpg",
+    },
+    {
+        id: 8,
+        name: "Delicate bouquet Persian",
+        price: 43.07,
+        image: "https://storage.florist.ru/cdn-cgi/image/format=webp/f/get/iflorist/product/O/V/_dPZ3A4SWxNeDhsZ2pKd0RLVFUyVHprYnliVjdxSGo1eE42bFVlOE9FZTFOYnJYbDNoRktYZStLQUs2OG13a3RmR0kvZFlTSGxlWGlUdFFEQ1BpUDNFcHVmQ3RWdXdZMG9SOTM1L0w3YmxkeFVEUVNzOHVYRlVuL3ZUd3FUTDF3Um1KaVhoQlpHbzZBNE5KdG10T0pBPT0=/270x270/img.jpg",
+    },
+    {
+        id: 9,
+        name: "Raspberry Pudding",
+        price: 90.82,
+        image: "https://storage.florist.ru/cdn-cgi/image/format=webp/f/get/content/bouquet-list/ae/0d/_db627b3b8f4fcf2b5c67a534a30d/270x270/647d8ecb29688.jpg",
+    },
+    {
+        id: 10,
+        name: "Holiday Magic",
+        price: 85.17,
+        image: "https://storage.florist.ru/cdn-cgi/image/format=webp/f/get/content/bouquet-list/3c/53/_e6514d0f4231f0691c619bc8e860/270x270/6391a943e36f8.jpg",
+    },
 ];
 
 export async function GET() {

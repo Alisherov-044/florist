@@ -1,0 +1,15 @@
+@import "@/styles/abstract/mixins", "@/styles/abstract/variables";
+
+.breadcrumb {
+    @include flex(row, center, flex-start);
+    gap: 5px;
+
+    & > a {
+        color: rgba($color: $green, $alpha: 0.5);
+        transition: all 0.2s ease;
+
+        &:hover {
+            color: $green;
+        }
+    }
+}

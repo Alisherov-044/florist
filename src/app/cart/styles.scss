@@ -1,0 +1,13 @@
+.cart-page {
+    position: relative;
+    padding-block: 20px;
+
+    &__title {
+        text-align: center;
+        margin-block: 20px;
+    }
+
+    &__text {
+        text-align: center;
+    }
+}

@@ -4,7 +4,7 @@
     box-sizing: border-box;
 
     &::-webkit-scrollbar {
-        width: 8px;
+        width: 5px;
         background: transparent;
     }
 
@@ -21,8 +21,10 @@ body {
 
 body {
     @include flex(column, flex-start, space-between);
+    font-family: "Poppins", sans-serif;
 
     & > main {
+        width: 100%;
         flex: 1 1 auto;
     }
 }
@@ -44,7 +46,7 @@ button {
 
 .container {
     width: 100%;
-    max-width: 1290px;
+    max-width: 1330px;
     padding-inline: 10px;
     margin-inline: auto;
 }

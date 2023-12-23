@@ -1,6 +1,6 @@
 import "@/styles/main.scss";
 
-import { CartProvider } from "@/context";
+import { Providers } from "@/providers";
 import { Header, Footer } from "@/components";
 
 export const metadata = {
@@ -15,11 +15,11 @@ export default function RootLayout({ children }) {
     return (
         <html lang="en">
             <body>
-                <CartProvider>
+                <Providers>
                     <Header />
                     {children}
                     <Footer />
-                </CartProvider>
+                </Providers>
             </body>
         </html>
     );

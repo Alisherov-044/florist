@@ -6,6 +6,7 @@
     border-radius: 4px;
     overflow: hidden;
     transition: all 0.2s ease;
+    background-color: $white;
 
     @media screen and (any-hover: hover) {
         &:hover {
@@ -48,10 +49,24 @@
                     transition: all 0.2s ease;
                 }
 
-                &.active,
                 &:hover {
                     path {
                         stroke: $green;
+                    }
+                }
+
+                &.favourites.active {
+                    path {
+                        fill: $red;
+                        stroke: none;
+                    }
+                }
+
+                &.cart.active {
+                    path {
+                        fill: $green;
+                        stroke: $green;
+                        opacity: 0.5;
                     }
                 }
             }
@@ -69,5 +84,34 @@
 
     &__price {
         @include font(16px, 600, 120%, $black);
+    }
+
+    &__quantity {
+        @include flex(row, center, space-between);
+        width: 100%;
+        max-width: 100px;
+        margin-inline: auto;
+        padding: 5px;
+        margin-top: 10px;
+
+        &--text {
+            @include center;
+            flex: 1 1 auto;
+        }
+
+        &--button {
+            border: 1px solid $black;
+            padding-inline: 5px;
+        }
+    }
+
+    &__delete {
+        @include font(14px, 400, 120%, $white);
+        position: absolute;
+        top: 10px;
+        right: 10px;
+        padding: 5px;
+        border-radius: 4px;
+        background-color: $red;
     }
 }
