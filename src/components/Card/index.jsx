@@ -26,7 +26,9 @@ export function Card({ product, isCart = false }) {
                 <h4 className="card__name">{name}</h4>
 
                 <div className="card__content--row">
-                    <span className="card__price">{formatCurrency(price)}</span>
+                    <span className="card__price">
+                        {formatCurrency(isCart ? price * quantity : price)}
+                    </span>
 
                     <div className="card__content--actions">
                         <Icons.heart
