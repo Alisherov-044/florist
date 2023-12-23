@@ -49,9 +49,11 @@
                     transition: all 0.2s ease;
                 }
 
-                &:hover {
-                    path {
-                        stroke: $green;
+                @media screen and (any-hover: hover) {
+                    &:hover {
+                        path {
+                            stroke: $green;
+                        }
                     }
                 }
 
