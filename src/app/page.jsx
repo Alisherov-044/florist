@@ -2,8 +2,8 @@
 import "./home/styles.scss";
 
 import { Slider } from "./home";
-import { Products } from "@/components";
 import { useProducts } from "@/context";
+import { Loading, Products } from "@/components";
 
 export default function Home() {
     const { products } = useProducts();
@@ -11,7 +11,11 @@ export default function Home() {
     return (
         <main className="home-page">
             <Slider />
-            <Products products={products} />
+            {typeof products === "undefined" ? (
+                <Loading />
+            ) : (
+                <Products products={products} />
+            )}
         </main>
     );
 }

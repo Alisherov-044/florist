@@ -6,7 +6,7 @@ import { formatCurrency } from "@/utils";
 import { useCart, useFavourites } from "@/context";
 
 export function Card({ product, isCart = false }) {
-    const { id, name, image, price, quantity } = product;
+    const { slug, name, image, price, quantity } = product;
     const {
         toggleProduct,
         isInCart,
@@ -18,7 +18,7 @@ export function Card({ product, isCart = false }) {
 
     return (
         <div className="card">
-            <Link href={`/product/${id}`} className="card__img">
+            <Link href={`/product/${slug}`} className="card__img">
                 <img src={image} alt={name} />
             </Link>
 
