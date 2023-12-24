@@ -15,6 +15,17 @@
         gap: 20px;
         grid-area: actions;
 
+        .contact-location {
+            svg {
+                width: 26px;
+
+                path {
+                    fill: none;
+                    stroke: $black;
+                }
+            }
+        }
+
         & > a {
             position: relative;
 

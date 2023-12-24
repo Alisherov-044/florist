@@ -19,6 +19,9 @@ export function Header() {
                 <Search className="header__search" />
 
                 <div className="header__actions">
+                    <Link href="/contact" className="contact-location">
+                        <Icons.location />
+                    </Link>
                     <Link href="/favourites">
                         <Icons.heart />
                         {favourites.length > 0 && (
