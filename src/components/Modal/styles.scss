@@ -1,0 +1,55 @@
+@import "@/styles/abstract/mixins", "@/styles/abstract/variables";
+
+.modal-bg {
+    @include center;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    transition: all 0.2s ease;
+    opacity: 0;
+    z-index: -10;
+    background-color: transparent;
+
+    &.open {
+        opacity: 1;
+        z-index: 10;
+        background-color: rgba($color: $black, $alpha: 0.6);
+    }
+
+    .modal {
+        @include center;
+        position: relative;
+        width: 100%;
+        max-width: 680px;
+        height: 100%;
+        max-height: 680px;
+        border-radius: 4px;
+        background-color: $white;
+        padding: 20px;
+
+        &__close {
+            position: absolute;
+            top: 0;
+            right: -30px;
+            z-index: 10;
+
+            svg {
+                width: 18px;
+                height: 18px;
+
+                path {
+                    stroke: rgba($color: $white, $alpha: 0.9);
+                    transition: all 0.2s ease;
+                }
+
+                &:hover {
+                    path {
+                        stroke: $white;
+                    }
+                }
+            }
+        }
+    }
+}
