@@ -96,6 +96,11 @@
             @include flex(column, flex-start, flex-start);
             @include font(15px, 400, 120%, $text-light);
             gap: 10px;
+            width: 100%;
+
+            span {
+                width: 100%;
+            }
         }
     }
 }
