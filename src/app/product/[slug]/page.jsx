@@ -47,7 +47,9 @@ export default function ProductDetails({ params: { slug } }) {
                                     }`}
                                 />
                             </div>
-                            <span>Product ID: {currentProduct.id}</span>
+                            <span className="product-details__id">
+                                Product ID: {currentProduct.id}
+                            </span>
                             <p className="product-details__text">
                                 {currentProduct.description}
                             </p>

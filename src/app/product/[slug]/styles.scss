@@ -115,6 +115,10 @@
         }
     }
 
+    &__id {
+        width: 100%;
+    }
+
     &__price {
         @include font(24px, 600, 120%, $black);
     }
